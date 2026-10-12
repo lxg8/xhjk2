@@ -51,7 +51,7 @@ VPNGATE_MIRROR = os.environ.get(
     "https://raw.githubusercontent.com/fdciabdul/Vpngate-Scraper-API/main/json/data.json",
 )
 # 已部署的 Cloudflare Worker 检测接口 (GET /check?proxyip=host:port, 实测确认)
-WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://mimi567.564789.xyz/check?sstp=vpn:vpn@")
+WORKER_CHECK_URL = os.environ.get("CHECK_WORKER", "https://xhjk1.lxg88.cyou/check?sstp=vpn:vpn@")
 CONCURRENCY = max(1, int(os.environ.get("CHECK_CONCURRENCY", "32")))   # 与 Worker 网页端一致的并发模型
 CHECK_TIMEOUT = float(os.environ.get("CHECK_TIMEOUT", "90"))          # 单请求客户端超时 (秒)
 MAX_CHECK_NODES = int(os.environ.get("MAX_CHECK_NODES", "0"))         # 0=不限; 本地测试可设小值
@@ -460,8 +460,8 @@ EDGE_HOSTS = [
     h.strip()
     for h in os.environ.get(
         "EDGE_HOSTS",
-        "[2606:4700:5a::5ee2:5c7a]:443,[2606:4700:57::fb9c:b262]:443,cf.nyanya.moe:443,fn.130519.xyz:443,"
-        "cdn.cnno.de:443,saas.sin.fan:443,img.css.sd:443",
+        "[2606:4700:4402::ac40:985b]:443,[2606:4700:59:c707:15b2:3916:95f4:331a]:443,[2606:4700:4400::6812:2274]:443,[2606:4700:440f:3316:28ba:119e:8f34:51a9]:443,"
+        "[2606:4700:57::fb9c:b232]:443,[2606:4700:5a::2069:e432]:443,[2606:4700:52::9223:9225]:443",
     ).split(",")
     if h.strip()
 ]
@@ -522,8 +522,8 @@ def build_hosts_text(data):
 
 
 # edgetunnel 完整订阅 (vless://) 配置
-EDT_UUID = os.environ.get("EDT_UUID", "3a92c6c-cdf4-442c-817a-917e026812a2")
-EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "mimi767.564789.xyz")
+EDT_UUID = os.environ.get("EDT_UUID", "61192c6c-cdf4-442c-818a-917e02681223")
+EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "xhjk02.lxg88.cyou")
 EDT_FINGERPRINT = os.environ.get("EDT_FINGERPRINT", "chrome")
 SUB_URL = os.environ.get("SUB_URL", "https://jerylihub.github.io/gate/sub.txt")
 
